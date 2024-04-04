@@ -104,7 +104,7 @@
 							<ul class="sidebar__list">
 
 								<li class="sidebar__item">
-									<a href="auth.html" class="sidebar__link">
+									<a href="auth.html" class="sidebar__link active">
 										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
 											<path
 												d="M7.99373 13.6666V12.6666H12.4617C12.513 12.6666 12.56 12.6453 12.6027 12.6025C12.6454 12.5598 12.6668 12.5128 12.6668 12.4615V3.53845C12.6668 3.48716 12.6454 3.44014 12.6027 3.3974C12.56 3.35466 12.513 3.3333 12.4617 3.3333H7.99373V2.33331H12.4617C12.7984 2.33331 13.0835 2.44998 13.3168 2.68331C13.5501 2.91665 13.6668 3.20169 13.6668 3.53845V12.4615C13.6668 12.7982 13.5501 13.0833 13.3168 13.3166C13.0835 13.5499 12.7984 13.6666 12.4617 13.6666H7.99373ZM7.08991 10.8461L6.39763 10.123L8.0207 8.49995H2.3335V7.49998H8.0207L6.39763 5.8769L7.08991 5.15385L9.93605 7.99996L7.08991 10.8461Z"
@@ -293,39 +293,23 @@
 
 					<section class="guide main__right">
 						<div class="guide__body">
-							<h1 class="guide__title">Инструкция по эксплуатации системы управления активами iPark</h1>
+							<h1 class="guide__title">Шаг №1. Авторизация</h1>
 							<p class="guide__text">
-								Данная инструкция поможет вам освоить работу с сервисом. Следуйте шагам ниже для быстрого старта
-								использования iPark
-							</p>
-							<p class="guide__text">
-								Данная инструкция поможет вам освоить работу с сервисом. Следуйте шагам ниже для быстрого старта
-								использования iPark
-							</p>
-							<p class="guide__text">
-								Данная инструкция поможет вам освоить работу с сервисом. Следуйте шагам ниже для быстрого старта
-								использования iPark
-							</p>
-							<p class="guide__text">
-								Данная инструкция поможет вам освоить работу с сервисом. Следуйте шагам ниже для быстрого старта
-								использования iPark
-							</p>
-							<p class="guide__text">
-								Данная инструкция поможет вам освоить работу с сервисом. Следуйте шагам ниже для быстрого старта
-								использования iPark
+								Для авторизации в сервисе, в интернет браузере перейдите на сайт <a href="#"
+									class="guide__link">https://dcut.tech</a> и введите полученный Вами логин и пароль
 							</p>
 
 							<div class="guide__devices">
 								<div class="guide__macbook">
 									<img src="img/macbook_transparent.png" />
-									<div class="guide__device-text">
-										Тут будет отображаться видеоинструкция для персональных компьютеров/ноутбуков
+									<div class="guide__device-video lazy-video" data-id="iWDegk1iPb8">
+										<img src="img/play_button.png" class="play-button" />
 									</div>
 								</div>
 								<div class="guide__iphone">
 									<img src="img/iphone_transparent.png" />
-									<div class="guide__device-text">
-										Тут будет отображаться видеоинструкция для смартфонов
+									<div class="guide__device-video lazy-video" data-id="iWDegk1iPb8">
+										<img src="img/play_button.png" class="play-button" />
 									</div>
 								</div>
 							</div>
@@ -367,8 +351,8 @@
 									<swiper-slide>
 										<div class="guide__macbook">
 											<img src="img/macbook_transparent.png" />
-											<div class="guide__device-text">
-												Тут будет отображаться видеоинструкция для персональных компьютеров/ноутбуков
+											<div class="guide__device-video lazy-video" data-id="iWDegk1iPb8">
+												<img src="img/play_button.png" class="play-button" />
 											</div>
 										</div>
 									</swiper-slide>
@@ -376,15 +360,14 @@
 									<swiper-slide>
 										<div class="guide__iphone">
 											<img src="img/iphone_transparent.png" />
-											<div class="guide__device-text">
-												Тут будет отображаться видеоинструкция для смартфонов
+											<div class="guide__device-video lazy-video" data-id="iWDegk1iPb8">
+												<img src="img/play_button.png" class="play-button" />
 											</div>
 										</div>
 									</swiper-slide>
 
 								</swiper-container>
 							</div>
-
 						</div>
 					</section>
 				</div>
@@ -504,6 +487,7 @@
 							<input required type="text" class="modal__input modal__name" placeholder="Ваше имя" />
 							<input required type="email" class="modal__input modal__email" placeholder="Электронная почта" />
 							<input required type="tel" class="modal__input modal__tel" placeholder="Номер телефона" />
+							<textarea class="modal__textarea" placeholder="Ваш вопрос" required></textarea>
 							<button type="submit" class="modal__submit" id="send-question-submit">Отправить</button>
 						</form>
 					</div>
@@ -515,6 +499,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 	<script src="js/header.js"></script>
 	<script src="js/modal.js"></script>
+	<script src="js/lazy-loading.js"></script>
 </body>
 
 </html>

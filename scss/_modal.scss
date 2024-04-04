@@ -76,15 +76,25 @@
 		}
 	}
 
-	&__input {
+	&__input, &__textarea {
 		background: #F8F9FA;
-		flex: 0 0 44px;
 		padding: 0 20px;
 		border-radius: 10px;
+		resize: none;
 
 		&::placeholder {
 			color: #33333342;
 		}
+	}
+
+	&__input {
+		padding: 0 20px;
+		flex: 0 0 44px;
+	}
+
+	&__textarea {
+		padding: 12px 20px;
+		flex: 0 0 132px;
 	}
 
 	&__submit {

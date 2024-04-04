@@ -35,6 +35,14 @@
 		}
 	}
 
+	&__link.active {
+		.sidebar__icon {
+			fill: var(--blue);
+		}
+		color: var(--blue);
+		font-weight: 800;
+	}
+
 	&__send-question {
 		color: #FFFFFF;
 		background: var(--blue);
@@ -49,35 +57,4 @@
 	}
 
 	// ------------------------------------------------------------------------------------
-
-	*::-webkit-scrollbar {
-		height: 7px;
-		width: 7px;
-	}
-	*::-webkit-scrollbar-track {
-		border-radius: 20px;
-		background-color: #E0EBF3;
-	}
-	
-	*::-webkit-scrollbar-track:hover {
-		background-color: #E0EBF3;
-	}
-	
-	*::-webkit-scrollbar-track:active {
-		background-color: #E0EBF3;
-	}
-	
-	*::-webkit-scrollbar-thumb {
-		border-radius: 20px;
-		background-color: #0167B0;
-		border: 2px solid #E0EBF3;
-	}
-	
-	*::-webkit-scrollbar-thumb:hover {
-		background-color: #0167B0;
-	}
-	
-	*::-webkit-scrollbar-thumb:active {
-		background-color: #0167B0;
-	}
 }
