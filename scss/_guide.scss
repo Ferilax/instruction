@@ -1,0 +1,124 @@
+.guide {
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-right: 7px;
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		height: 100%;
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+	}
+
+	&__title,
+	&__text {
+		padding-left: 6%;
+	}
+
+	&__text {
+		flex: 1 1 auto;
+	}
+
+	&__device-text {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		text-align: center;
+		font-size: 12px;
+
+		@include lg-d {
+			font-size: 11px;
+		}
+		@include md {
+			font-size: 12px;
+		}
+	}
+
+	&__devices {
+		display: flex;
+		gap: 20px;
+		margin-top: 20px;
+		min-width: 0;
+	}
+
+	&__macbook {
+		aspect-ratio: 516/315;
+		position: relative;
+
+		.guide__device-text {
+			padding: 0 140px;
+		}
+	}
+
+	&__iphone {
+		aspect-ratio: 155/315;
+		position: relative;
+
+		.guide__device-text {
+			padding: 0 14px;
+		}
+	}
+
+	&__arrows {
+		display: none;
+		margin-top: 20px;
+	}
+
+	&__slider {
+		display: none;
+		border: 1px solid #000;
+
+		//margin: 0 -20px;
+	}
+
+	// --------------------------------------------------------
+
+	@include md-d {
+		margin: 0 -20px;
+
+		&__devices {
+			display: none;
+		}
+		&__title, &__text {
+			padding: 0;
+			padding: 0 20px;
+		}
+		&__arrows {
+			display: flex;
+			padding: 0 20px;
+		}
+		&__slider {
+			display: block;
+		}
+		&__iphone {
+			margin: auto;
+			max-width: 205px;
+		}
+		&__macbook {
+			margin: auto;
+			max-width: 700px;
+
+			.guide__device-text {
+				padding: 0 55px;
+			}
+		}
+	}
+	@include sm-d {
+		&__iphone {
+			max-width: 155px;
+		}
+	}
+}

@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import "_nullstyle";
+@import "_vars";
+@import "_header";
+@import "_breakpoints";
+@import "_arrows";
+@import "_footer";
+@import "_aside";
+@import "_guide";
+
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	scroll-behavior: smooth;
+	position: relative;
+	font-family: Manrope;
+	font-size: 14px;
+	font-weight: 400;
+	color: var(--black);
+	overflow-x: hidden;
+	line-height: 1.4;
+}
+
+.container {
+	max-width: 1176px;
+	padding: 0 30px;
+	margin: auto;
+
+	@include md-d {
+		padding: 0 20px;
+	}
+}
+
+.wrapper {
+	display: flex;
+	gap: 40px;
+	flex-direction: column;
+	height: 100%;
+
+	@include md-d {
+		gap: 100px;
+	}
+}
+
+body.lock {
+	overflow: hidden;
+}
+
+// -------------------------------------------------------------------
+
+h2,
+.modal__title {
+	font-size: 32px;
+	font-weight: 800;
+	line-height: 1.2;
+
+	@include sm-d {
+		font-size: 24px;
+	}
+}
+
+section {
+	.container {
+		>div {
+			scroll-margin-top: 66px;
+		}
+	}
+}
+
+h1 {
+	font-size: 32px;
+	font-weight: 800;
+	line-height: 1.2;
+
+	@include lg-d {
+		font-size: 30px;
+	}
+
+	@include md-d {
+		font-size: 28px;
+	}
+
+	@include sm-d {
+		font-size: 24px;
+	}
+}
+
+.main {
+	flex: 1 1 auto;
+	min-height: 400px;
+	padding-top: 106px;
+
+	&__row {
+		height: 100%;
+		display: grid;
+		grid-template-columns: 363px 1fr;
+		grid-template-rows: 100%;
+		max-height: 584px;
+		gap: 75px;
+
+		@include lg-d {
+			gap: 50px;
+		}
+
+		@include md-d {
+			grid-template-columns: 1fr;
+			grid-template-rows: 414px auto;
+			max-height: unset;
+		}
+	}
+
+	.container {
+		height: 100%;
+	}
+
+	@include md-d {
+		min-height: unset;
+		padding-top: 91px;
+	}
+}
