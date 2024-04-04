@@ -575,6 +575,9 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
   margin-top: 20px;
 }
+.guide__arrows swiper-slide {
+  margin: auto 0;
+}
 .guide__slider {
   display: none;
 }

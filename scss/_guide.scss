@@ -42,6 +42,7 @@
 		@include lg-d {
 			font-size: 11px;
 		}
+
 		@include md {
 			font-size: 12px;
 		}
@@ -75,6 +76,10 @@
 	&__arrows {
 		display: none;
 		margin-top: 20px;
+
+		swiper-slide {
+			margin: auto 0;
+		}
 	}
 
 	&__slider {
@@ -92,21 +97,27 @@
 		&__devices {
 			display: none;
 		}
-		&__title, &__text {
+
+		&__title,
+		&__text {
 			padding: 0;
 			padding: 0 20px;
 		}
+
 		&__arrows {
 			display: flex;
 			padding: 0 20px;
 		}
+
 		&__slider {
 			display: block;
 		}
+
 		&__iphone {
 			margin: auto;
 			max-width: 205px;
 		}
+
 		&__macbook {
 			margin: auto;
 			max-width: 700px;
@@ -116,6 +127,7 @@
 			}
 		}
 	}
+
 	@include sm-d {
 		&__iphone {
 			max-width: 155px;
