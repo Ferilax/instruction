@@ -9,7 +9,7 @@ videos.forEach(el => {
 	playButton.addEventListener("click", () => {
 		el.innerHTML = `
 			<iframe
-				src="https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1"
+				src="https://www.youtube.com/embed/${videoId}?autoplay=1"
 				referrerpolicy="strict-origin-when-cross-origin"
 				allowfullscreen
 			></iframe>
