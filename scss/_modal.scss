@@ -111,6 +111,10 @@
 		border: 1px solid red;
 	}
 
+	&__textarea.error {
+		border: 1px solid red;
+	}
+
 	@include sm-d {
 		&__form {
 			margin-top: 20px;

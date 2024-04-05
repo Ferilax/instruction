@@ -617,6 +617,7 @@ h1, h2, h3, h4, h5, h6 {
   .guide__body {
     max-height: unset;
     min-height: unset;
+    height: unset;
   }
   .guide__devices {
     display: none;
@@ -747,6 +748,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #FFFFFF;
 }
 .modal__input.error {
+  border: 1px solid red;
+}
+.modal__textarea.error {
   border: 1px solid red;
 }
 @media (max-width: 767.8px) {

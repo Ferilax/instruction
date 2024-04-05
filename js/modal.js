@@ -16,40 +16,52 @@ const validateEmail = (email) => {
 };
 
 // Установить валидатор на модалку и выполнить callback при успешной валидации
-// Обязательно должно быть три поля: name, email, tel. Иначе ошибка
 function setValidateOnModal(modal, callback) {
 	const submitButton = modal.querySelector(".modal__submit");
 	const nameInput = modal.querySelector(".modal__name");
 	const emailInput = modal.querySelector(".modal__email");
 	const telInput = modal.querySelector(".modal__tel");
+	const textarea = modal.querySelector(".modal__textarea");
 
 	submitButton.addEventListener("click", function (e) {
 		e.preventDefault();
 
-		if (!nameInput.value) {
+		if (nameInput && !nameInput.value) {
 			nameInput.classList.add("error");
 			return;
 		}
 
-		if (!validateEmail(emailInput.value)) {
+		if (emailInput && !validateEmail(emailInput.value)) {
 			emailInput.classList.add("error");
 			return;
 		}
 
-		if (isNaN(+telInput.value) || !telInput.value) {
+		if (telInput && isNaN(+telInput.value) || !telInput.value) {
 			telInput.classList.add("error");
+			return;
+		}
+
+		if (textarea && !textarea.value) {
+			textarea.classList.add("error");
 			return;
 		}
 
 		modal.classList.remove("open");
 
-		nameInput.value = "";
-		emailInput.value = "";
-		telInput.value = "";
+		nameInput ? nameInput.value = "" : null;
+		emailInput ? emailInput.value = "" : null;
+		telInput ? telInput.value = "" : null;
+		textarea ? textarea.value = "" : null;
 
-		nameInput.classList.remove("error");
-		emailInput.classList.remove("error");
-		telInput.classList.remove("error");
+		if (nameInput) nameInput.value = "";
+		if (emailInput) emailInput.value = "";
+		if (telInput) telInput.value = "";
+		if (textarea) textarea.value = "";
+
+		nameInput?.classList.remove("error");
+		emailInput?.classList.remove("error");
+		telInput?.classList.remove("error");
+		textarea?.classList.remove("error");
 
 		callback ? callback() : null;
 	})
