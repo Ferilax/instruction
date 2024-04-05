@@ -614,6 +614,10 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 -20px;
     padding-right: 0;
   }
+  .guide__body {
+    max-height: unset;
+    min-height: unset;
+  }
   .guide__devices {
     display: none;
   }
@@ -877,7 +881,7 @@ h1 {
 @media (max-width: 1023.8px) {
   .main {
     min-height: unset;
-    padding-top: 91px;
+    margin-top: 91px;
   }
 }
 .main *::-webkit-scrollbar {

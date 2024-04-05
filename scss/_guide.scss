@@ -149,6 +149,11 @@
 		margin: 0 -20px;
 		padding-right: 0;
 
+		&__body {
+			max-height: unset;
+			min-height: unset;
+		}
+
 		&__devices {
 			display: none;
 		}
