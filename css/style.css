@@ -390,6 +390,8 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(255, 255, 255, 0.2274509804);
 }
 .footer__logo {
+  display: flex;
+  align-items: center;
   width: 109px;
 }
 .footer__logo-container {

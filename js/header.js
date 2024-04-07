@@ -6,7 +6,6 @@ const close = document.querySelector(".header__close");
 const nav = document.querySelector(".header__nav");
 
 burger.addEventListener("click", () => {
-	console.log(1)
 	header.classList.toggle("menu-open");
 	body.classList.toggle("lock");
 })
